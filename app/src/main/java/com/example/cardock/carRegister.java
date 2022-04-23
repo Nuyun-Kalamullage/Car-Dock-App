@@ -29,6 +29,10 @@ public class carRegister extends AppCompatActivity {
     ImageView rearView;
     ImageView interiorView;
     ImageView sideView;
+    String frontUri = "";
+    String rearUri = "";
+    String interiorUri = "";
+    String sideUri = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,9 +41,7 @@ public class carRegister extends AppCompatActivity {
         getSupportActionBar().setTitle("Car Registration");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
         imageViewHandling();
-
 
         Button submit = findViewById(R.id.buttonSubmit);
 
@@ -106,9 +108,18 @@ public class carRegister extends AppCompatActivity {
         }
         String millage = millageText.getText().toString();
         String description = descriptionText.getText().toString();
-        if (car.RegisterNewCar(logins,frontView,rearView,interiorView,sideView,model,year,millage,price,description,fuelType,finance)){
+        if (car.registeredCarsArray.containsKey(logins) || finance == null || fuelType == -1 || model.isEmpty() || year.isEmpty() || price.isEmpty() || millage.isEmpty() || description.isEmpty() || frontUri.isEmpty() || rearUri.isEmpty() || interiorUri.isEmpty() || sideUri.isEmpty()){
+            if (car.registeredCarsArray.containsKey(logins) )
+                Toast.makeText(carRegister.this, "this User already Register a car, ", Toast.LENGTH_SHORT).show();
+            else
+                Toast.makeText(carRegister.this, "Fill the form first, ", Toast.LENGTH_SHORT).show();
+
+        }
+        else if (car.RegisterNewCar(logins,frontUri,rearUri,interiorUri,sideUri,model,year,millage,price,description,fuelType,finance)){
             Toast.makeText(carRegister.this, "Car Registration Successful, ", Toast.LENGTH_SHORT).show();
-            Intent lunch = new Intent(carRegister.this, landingPage.class);
+            car.registeredCarsArray.get(logins).setHasAd(true);
+            Intent lunch = new Intent(           carRegister.this, landingPage.class);
+            lunch.putExtra("userName",logins);
             startActivity(lunch);
         }
     }
@@ -147,6 +158,15 @@ public class carRegister extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (resultCode == RESULT_OK && requestCode == IMAGE_PICK_CODE) {
             setImage.setImageURI(data.getData());
+            if (setImage == frontView){
+                frontUri =data.getData().toString();
+            }else if (setImage == rearView){
+                rearUri = data.getData().toString();
+            }else if (setImage == interiorView){
+                interiorUri = data.getData().toString();
+            }else if (setImage == sideView){
+                sideUri = data.getData().toString();
+            }
         }else
             System.out.println("uuuuu");
     }
