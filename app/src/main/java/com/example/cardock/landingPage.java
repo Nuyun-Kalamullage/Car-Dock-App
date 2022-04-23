@@ -55,9 +55,8 @@ public class landingPage extends AppCompatActivity {
         TextView name = findViewById(R.id.nameofuser);
         TextView email = findViewById(R.id.emailofuser);
 
-        if (user.registeredUserArray.get(logins).getImageUri().isEmpty()){
-                    prologo.setImageResource(R.mipmap.profilepic);
-        }else prologo.setImageURI(Uri.parse(user.registeredUserArray.get(logins).getImageUri()));
+        if (!user.registeredUserArray.get(logins).getImageUri().isEmpty())
+            prologo.setImageURI(Uri.parse(user.registeredUserArray.get(logins).getImageUri()));
         System.out.println(user.registeredUserArray.get(logins).getImageUri());
         name.setText(user.registeredUserArray.get(logins).getName());
         email.setText(user.registeredUserArray.get(logins).getEmail());
