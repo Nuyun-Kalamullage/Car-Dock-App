@@ -29,7 +29,7 @@ public class userRegistration extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         profile = findViewById(R.id.imageProfile);
-        profile.setImageResource(R.mipmap.profilepic);
+        profile.setImageResource(R.drawable.defultprofile);
         EditText nametext = findViewById(R.id.nameedittext);
         EditText emailtext = findViewById(R.id.priceText);
         EditText usernametext = findViewById(R.id.millageedittext);
@@ -68,13 +68,19 @@ public class userRegistration extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
+    }
+
     @SuppressLint("MissingSuperCall")
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (resultCode == RESULT_OK && requestCode == IMAGE_PICK_CODE) {
             ImageUrl=data.getDataString();
             profile.setImageURI(Uri.parse(ImageUrl));
-        }else
-            System.out.println("uuuuu");
+        }
     }
 }

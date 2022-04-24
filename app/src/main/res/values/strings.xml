@@ -31,4 +31,5 @@
     <string name="sign_in">sign in</string>
     <string name="sign_up">Sign Up</string>
     <string name="my_ad">My Ad</string>
+    <string name="user_name">   User name</string>
 </resources>

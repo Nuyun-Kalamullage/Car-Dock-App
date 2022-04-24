@@ -7,11 +7,11 @@
     tools:context=".userRegistration">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="369dp"
-        android:layout_height="610dp"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical"
+        android:id ="@+id/linearLayout"
+        android:layout_width ="369dp"
+        android:layout_height ="610dp"
+        android:layout_marginTop ="16dp"
+        android:orientation ="vertical"
         app:layout_constraintBottom_toTopOf="@+id/registerbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

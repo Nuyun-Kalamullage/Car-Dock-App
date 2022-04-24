@@ -10,7 +10,7 @@ public class SellingProfileViewModel extends ViewModel {
 
     public SellingProfileViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("My Car Ad");
     }
 
     public LiveData<String> getText() {

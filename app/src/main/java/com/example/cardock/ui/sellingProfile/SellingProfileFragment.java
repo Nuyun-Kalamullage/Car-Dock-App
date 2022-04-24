@@ -35,7 +35,7 @@ public class SellingProfileFragment extends Fragment {
         View root = binding.getRoot();
         logins = landingPage.logins;
 
-        final TextView textView = binding.textGallery;
+        final TextView textView = binding.textView;
         sellingProfileViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
         floattingButton = (FloatingActionButton) ( root.findViewById(R.id.floatingAddActionButton));

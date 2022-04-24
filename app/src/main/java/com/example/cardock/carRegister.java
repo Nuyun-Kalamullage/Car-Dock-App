@@ -41,6 +41,7 @@ public class carRegister extends AppCompatActivity {
         getSupportActionBar().setTitle("Car Registration");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
         imageViewHandling();
 
         Button submit = findViewById(R.id.buttonSubmit);
@@ -53,6 +54,13 @@ public class carRegister extends AppCompatActivity {
         });
 
     }
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
+    }
+
+
     private void imageViewHandling() {
 
          frontView=findViewById(R.id.imageView6);

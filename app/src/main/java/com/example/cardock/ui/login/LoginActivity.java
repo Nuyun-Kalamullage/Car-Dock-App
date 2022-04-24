@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         signupButton.setEnabled(true);
         loginButton.setEnabled(true);
         ImageView logo = (ImageView) findViewById(R.id.imageView2);
-        logo.setImageResource(R.mipmap.car_logo_foreground);
+        logo.setImageResource(R.drawable.cardoglogofinal);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,8 +76,6 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
-
-
         }
     private void loginAuthorize () {
         String userName = usernameEditText.getText().toString();
