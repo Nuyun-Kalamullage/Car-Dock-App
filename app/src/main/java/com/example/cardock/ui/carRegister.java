@@ -1,4 +1,4 @@
-package com.example.cardock;
+package com.example.cardock.ui;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.cardock.R;
 import com.example.cardock.backend.car;
 
 import org.jetbrains.annotations.Nullable;
@@ -25,6 +26,7 @@ public class carRegister extends AppCompatActivity {
     public static final int IMAGE_PICK_CODE = 100;
     protected static ImageView setImage;
     public static String logins;
+
     ImageView frontView;
     ImageView rearView;
     ImageView interiorView;
@@ -33,6 +35,7 @@ public class carRegister extends AppCompatActivity {
     String rearUri = "";
     String interiorUri = "";
     String sideUri = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,12 +43,9 @@ public class carRegister extends AppCompatActivity {
         setContentView(R.layout.activity_car_register);
         getSupportActionBar().setTitle("Car Registration");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
         imageViewHandling();
 
         Button submit = findViewById(R.id.buttonSubmit);
-
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

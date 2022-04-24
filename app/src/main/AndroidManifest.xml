@@ -10,15 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CarDock">
         <activity
-            android:name=".userRegistration"
+            android:name=".ui.userRegistration"
             android:exported="false"
             android:parentActivityName=".ui.login.LoginActivity"/>
         <activity
-            android:name=".carRegister"
+            android:name=".ui.carRegister"
             android:exported="false"
+            android:parentActivityName=".ui.landingPage"
             />
         <activity
-            android:name=".landingPage"
+            android:name=".ui.landingPage"
             android:exported="false"
             android:label="@string/title_activity_landing_page"
             android:parentActivityName=".ui.login.LoginActivity"

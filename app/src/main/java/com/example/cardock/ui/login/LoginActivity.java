@@ -13,17 +13,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.example.cardock.R;
 import com.example.cardock.backend.user;
 import com.example.cardock.databinding.ActivityLoginBinding;
-import com.example.cardock.landingPage;
-import com.example.cardock.userRegistration;
+import com.example.cardock.ui.landingPage;
+import com.example.cardock.ui.userRegistration;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private LoginViewModel loginViewModel;
     private ActivityLoginBinding binding;
     EditText usernameEditText;
     EditText passwordEditText;
@@ -34,9 +32,6 @@ public class LoginActivity extends AppCompatActivity {
         user.registeredUserArray.put("nuyun",new user("Nuyun Pabasara","nuyunp@sltc.ac.lk","nuyun","nuyun".hashCode(),"991781757V","0775225911",""));
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        loginViewModel = new ViewModelProvider(this, new LoginViewModelFactory())
-                .get(LoginViewModel.class);
 
         usernameEditText = binding.username;
         passwordEditText = binding.password;

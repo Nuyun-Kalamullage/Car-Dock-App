@@ -68,7 +68,7 @@ public class user {
     }
 
     public static boolean RegisterNewUser(String name, String email, String userName, int password, String nic, String contactNumber, String imageUrl){
-        if(!registeredUserArray.containsKey(userName)){
+        if(!registeredUserArray.containsKey(userName) && !name.isEmpty() && !email.isEmpty() && !userName.isEmpty() && password != 0 && !nic.isEmpty() && !contactNumber.isEmpty() && !imageUrl.isEmpty() ){
             registeredUserArray.put(userName, new user( name,  email, userName, password, nic, contactNumber,imageUrl));
             return true;
         }

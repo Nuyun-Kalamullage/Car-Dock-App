@@ -1,4 +1,4 @@
-package com.example.cardock;
+package com.example.cardock.ui;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.cardock.R;
 import com.example.cardock.ui.login.LoginActivity;
 import com.example.cardock.backend.user;
 

@@ -17,9 +17,9 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.cardock.R;
 import com.example.cardock.backend.car;
-import com.example.cardock.carRegister;
+import com.example.cardock.ui.carRegister;
 import com.example.cardock.databinding.FragmentSellingProfileBinding;
-import com.example.cardock.landingPage;
+import com.example.cardock.ui.landingPage;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class SellingProfileFragment extends Fragment {
     private FloatingActionButton floattingButton ;

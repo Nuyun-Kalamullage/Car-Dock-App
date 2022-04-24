@@ -5,8 +5,8 @@ import java.util.Date;
 import java.util.HashMap;
 
 public class car {
-    private  String front ;
-    private  String back;
+    private String front ;
+    private String rear;
     private String interior;
     private String side;
     private String model;
@@ -23,10 +23,10 @@ public class car {
     private Date datePublished;
     private int likesCount;
 
-    public car(String name, String front, String back, String interior, String side, String model, String year, String millage, String price, String description,int fueltype,boolean finance) {
+    public car(String name, String front, String rear, String interior, String side, String model, String year, String millage, String price, String description, int fueltype, boolean finance) {
         this.sellerName = name;
         this.front = front;
-        this.back = back;
+        this.rear = rear;
         this.interior = interior;
         this.side = side;
         this.model = model;
@@ -94,12 +94,9 @@ public class car {
             return false;
         }
     }
-    public int getCarCount(){
-        return carArrayList.size();
 
-    }
     public String[] getCarImageArray() {
-       return new String[]{front, back, interior, side};
+       return new String[]{front, rear, interior, side};
 
     }
 }

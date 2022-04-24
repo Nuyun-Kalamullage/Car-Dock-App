@@ -1,4 +1,4 @@
-package com.example.cardock;
+package com.example.cardock.ui;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.cardock.R;
 import com.example.cardock.backend.user;
 import com.example.cardock.databinding.ActivityLandingPageBinding;
 import com.google.android.material.navigation.NavigationView;
