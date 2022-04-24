@@ -36,7 +36,7 @@ public class carRegister extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        logins = landingPage.logins;
+        logins = getIntent().getStringExtra("userName");
         setContentView(R.layout.activity_car_register);
         getSupportActionBar().setTitle("Car Registration");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -125,7 +125,7 @@ public class carRegister extends AppCompatActivity {
         }
         else if (car.RegisterNewCar(logins,frontUri,rearUri,interiorUri,sideUri,model,year,millage,price,description,fuelType,finance)){
             Toast.makeText(carRegister.this, "Car Registration Successful, ", Toast.LENGTH_SHORT).show();
-            Intent lunch = new Intent(           carRegister.this, landingPage.class);
+            Intent lunch = new Intent(carRegister.this, landingPage.class);
             lunch.putExtra("userName",logins);
             startActivity(lunch);
         }
@@ -137,7 +137,6 @@ public class carRegister extends AppCompatActivity {
             public void onClick(View v) {
                 setImage = imageView;
                 pickImageGallary();
-                askGallaryPermission();
             }
 
         });
@@ -154,9 +153,8 @@ public class carRegister extends AppCompatActivity {
         if(requestCode == PERMISSION_CODE){
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
                 pickImageGallary();
-            }else{
-                Toast.makeText(this, "File manage permission need to go ahead", Toast.LENGTH_SHORT).show();
-            }
+            }else
+                askGallaryPermission();
         }
     }
 

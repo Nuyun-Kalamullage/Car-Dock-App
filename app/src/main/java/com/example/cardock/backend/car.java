@@ -16,7 +16,7 @@ public class car {
     private String description;
     private String fuelType;
     private String finance;
-    public static ArrayList<car> carArrayList;
+    public static ArrayList<car> carArrayList = new ArrayList<>();
 
     public static HashMap<String,car> registeredCarsArray = new HashMap<>();
     private String sellerName;

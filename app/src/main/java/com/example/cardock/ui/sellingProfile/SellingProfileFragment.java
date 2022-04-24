@@ -44,7 +44,9 @@ public class SellingProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "add new ad", Toast.LENGTH_SHORT).show();
+                getActivity().finish();
                 Intent lunch = new Intent(getActivity(), carRegister.class);
+                lunch.putExtra("userName",logins);
                 startActivity(lunch);
 //                Navigation.findNavController(view).navigate(R.id.action_sellingProfile_to_carRegister);
             }
