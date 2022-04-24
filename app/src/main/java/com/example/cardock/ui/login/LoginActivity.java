@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         signupButton.setEnabled(true);
         loginButton.setEnabled(true);
         ImageView logo = (ImageView) findViewById(R.id.imageView2);
-        logo.setImageResource(R.drawable.cardoglogofinal);
+        logo.setImageResource(R.drawable.logocardock);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override

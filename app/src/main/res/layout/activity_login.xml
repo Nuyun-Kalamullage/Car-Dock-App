@@ -5,7 +5,7 @@
     android:id="@+id/loginactivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bmwin"
+    android:background="@drawable/aaa"
     android:foregroundGravity="top"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -19,7 +19,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="48dp"
         android:autofillHints="@string/prompt_email"
-        android:background="#A8D8D4D4"
+        android:background="#A8FFFFFF"
         android:hint="@string/user_name"
         android:inputType="textPersonName"
         android:selectAllOnFocus="true"
@@ -34,7 +34,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:autofillHints="@string/prompt_password"
-        android:background="#A8D8D4D4"
+        android:background="#A8FFFFFF"
         android:hint="@string/prompt_password"
         android:imeActionLabel="@string/action_sign_in_short"
         android:imeOptions="actionDone"
@@ -57,10 +57,10 @@
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/signupButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.901"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
@@ -74,10 +74,10 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.912"
+        app:layout_constraintVertical_bias="0.767"
         tools:ignore="TouchTargetSizeCheck" />
 
     <ProgressBar
@@ -89,7 +89,7 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView

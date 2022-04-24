@@ -125,7 +125,6 @@ public class carRegister extends AppCompatActivity {
         }
         else if (car.RegisterNewCar(logins,frontUri,rearUri,interiorUri,sideUri,model,year,millage,price,description,fuelType,finance)){
             Toast.makeText(carRegister.this, "Car Registration Successful, ", Toast.LENGTH_SHORT).show();
-            car.registeredCarsArray.get(logins).setHasAd(true);
             Intent lunch = new Intent(           carRegister.this, landingPage.class);
             lunch.putExtra("userName",logins);
             startActivity(lunch);

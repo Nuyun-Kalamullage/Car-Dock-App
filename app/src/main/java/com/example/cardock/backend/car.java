@@ -1,10 +1,10 @@
 package com.example.cardock.backend;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
 public class car {
-    private boolean isHasAd = false;
     private  String front ;
     private  String back;
     private String interior;
@@ -16,6 +16,7 @@ public class car {
     private String description;
     private String fuelType;
     private String finance;
+    public static ArrayList<car> carArrayList;
 
     public static HashMap<String,car> registeredCarsArray = new HashMap<>();
     private String sellerName;
@@ -78,25 +79,24 @@ public class car {
         return finance;
     }
 
-    public boolean isHasAd() {
-        return isHasAd;
-    }
-
-    public void setHasAd(boolean hasAd) {
-        isHasAd = hasAd;
-    }
     public void setDatePublished(Date datePublished) {
         this.datePublished = datePublished;
     }
 
     public static boolean RegisterNewCar(String name, String front, String back, String interior, String side, String model, String year, String millage, String price, String description,int fueltype,boolean finance){
         if(!registeredCarsArray.containsKey(name)){
-            registeredCarsArray.put(name, new car( name,front, back, interior, side, model, year, millage, price, description,fueltype,finance));
+            car newCar = new car( name,front, back, interior, side, model, year, millage, price, description,fueltype,finance);
+            registeredCarsArray.put(name, newCar);
+            carArrayList.add(newCar);
             return true;
         }
         else{
             return false;
         }
+    }
+    public int getCarCount(){
+        return carArrayList.size();
+
     }
     public String[] getCarImageArray() {
        return new String[]{front, back, interior, side};
